@@ -1,12 +1,10 @@
-// const generateAssetMap = require('./bin/commands/actions/generateAssetMap.js')
-const getCache = require('./util/getCache.js')
-const updateCache = require('./util/updateCache.js')
+const cache = require('./services/cache')
+const edit = require('./services/recharge/theme/edit')
+const generateAssetMap = require('./services/recharge/generateAssetMap')
+
 
 
 const THEME_ID = '24277'
+const ASSET_ID = '1174605'
 // generateAssetMap(THEME_ID)
-const cache = getCache()
-console.log(cache)
-
-const updatedCache = updateCache({ ...cache, latest: 9 })
-console.log(updatedCache)
+edit(THEME_ID, ASSET_ID)

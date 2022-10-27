@@ -105,3 +105,5 @@ dist
 
 # recharge theme file
 theme.zip
+
+build/

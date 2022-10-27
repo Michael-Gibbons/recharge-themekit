@@ -1,9 +1,8 @@
-const fs = require('fs');
-const client = require('../../../services/client.js')
+const client = require('../client')
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-const updateCache = require('../../../util/updateCache')
+const cache = require('../cache')
 
 async function generateAssetMap(themeId) {
   client.get(`/theme-editor/${themeId}`).then(response => {
@@ -42,7 +41,7 @@ async function generateAssetMap(themeId) {
       theme.assets.push(assetItem)
     });
 
-    updateCache({ ...assetMap })
+    cache.update({ ...assetMap })
 
   })
 }
