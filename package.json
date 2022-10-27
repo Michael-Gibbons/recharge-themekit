@@ -1,0 +1,29 @@
+{
+  "name": "recharge-themekit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael-Gibbons/recharge-themekit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael-Gibbons/recharge-themekit/issues"
+  },
+  "homepage": "https://github.com/Michael-Gibbons/recharge-themekit#readme",
+  "dependencies": {
+    "axios": "^1.1.3",
+    "chokidar": "^3.5.3",
+    "commander": "^9.4.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "inquirer": "^9.1.4",
+    "jsdom": "^20.0.1"
+  }
+}
