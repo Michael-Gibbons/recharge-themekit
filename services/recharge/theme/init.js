@@ -5,7 +5,7 @@ const { JSDOM } = jsdom;
 const cache = require('../cache')
 
 async function generateAssetMap(themeId) {
-  client.get(`/theme-editor/${themeId}`).then(response => {
+  await client.get(`/theme-editor/${themeId}`).then(response => {
 
     let assetMap = {
       themes: [{
@@ -46,4 +46,8 @@ async function generateAssetMap(themeId) {
   })
 }
 
-module.exports = generateAssetMap
+const init = async (themeId) => {
+  await generateAssetMap(themeId)
+}
+
+module.exports = init
