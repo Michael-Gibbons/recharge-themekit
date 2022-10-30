@@ -52,11 +52,13 @@ const watch = program.command('watch')
 
     const log = console.log.bind(console);
 
+    const currentTheme = cache.get().find(theme => theme.latest)
+
     watcher
       .on('add', path => handleAddedFile(path))
       .on('change', path => handleChangedFile(path))
       .on('unlink', path => handleRemovedFile(path))
-      .on('ready', () => log('Initial scan complete. Ready for changes'));
+      .on('ready', () => log(`Initial scan complete. Watching for changes for theme: ${currentTheme.name}`));
   });
 
 export default watch
