@@ -1,5 +1,5 @@
-const client = require('../../client.js')
-const cache = require('../../cache')
+import client from '../../client.js'
+import cache from '../../cache/index.js'
 
 const edit = async (themeId, assetId, data = {}) => {
   const theme = cache.get().themes.find(theme => theme.id == themeId)
@@ -8,11 +8,11 @@ const edit = async (themeId, assetId, data = {}) => {
   const postData = {
     filename: asset.name,
     skip_validation: 1,
-    source: 'Test',
+    source: 'Please include source inside edit data object',
     ...data
   }
 
-  client.post(`/portal_theme/${themeId}/assets/${assetId}/edit.json`, postData).then(response => console.log(response))
+  return await client.post(`/portal_theme/${themeId}/assets/${assetId}/edit.json`, postData)
 }
 
-module.exports = edit
+export default edit

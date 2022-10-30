@@ -1,7 +1,7 @@
-const dotenv = require('dotenv')
+import dotenv from 'dotenv'
 dotenv.config()
 
-const axios = require('axios');
+import axios from 'axios';
 
 if (!process.env.RECHARGE_APP_URL) {
   throw 'Recharge App Url Required'
@@ -42,4 +42,4 @@ client.interceptors.response.use(function (response) {
   return Promise.reject(error);
 });
 
-module.exports = client
+export default client

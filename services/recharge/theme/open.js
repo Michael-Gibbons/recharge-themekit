@@ -1,7 +1,7 @@
-const open = require('open');
+import open from 'open';
 
 const openTheme = async (url) => {
   await open(url);
 }
 
-module.exports = openTheme
+export default openTheme

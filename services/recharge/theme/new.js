@@ -1,6 +1,6 @@
-const FormData = require('form-data');
+import FormData from 'form-data';
 
-const client = require('../../client')
+import client from '../../client.js'
 
 const newTheme = async (name) => {
   const formData = new FormData();
@@ -10,4 +10,4 @@ const newTheme = async (name) => {
   return await client.post('/portal_theme/import_theme', formData).then(res => res.data);
 }
 
-module.exports = newTheme
+export default newTheme

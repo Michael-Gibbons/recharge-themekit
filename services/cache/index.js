@@ -1,5 +1,5 @@
-const get = require('./get')
-const update = require('./update')
+import get from './get.js'
+import update from './update.js'
 
 const cache = {
   get,
@@ -7,4 +7,4 @@ const cache = {
 }
 
 
-module.exports = cache
+export default cache

@@ -1,8 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-const FormData = require('form-data');
+import fs from 'fs'
+import path from 'path'
+import FormData from 'form-data';
 
-const client = require('../../client')
+import client from '../../client.js'
 
 const importTheme = async (zipPath, name) => {
   const ZIP_PATH = path.resolve(process.cwd(), zipPath)
@@ -15,4 +15,4 @@ const importTheme = async (zipPath, name) => {
   return await client.post('/portal_theme/import_theme', formData).then(res => res.data);
 }
 
-module.exports = importTheme
+export default importTheme
