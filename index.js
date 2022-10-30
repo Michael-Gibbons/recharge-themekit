@@ -1,1 +1,0 @@
-// TODO: generate asset maps for all themes on startup

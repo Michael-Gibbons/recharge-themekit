@@ -16,7 +16,7 @@ const handleChangedFile = async (filePath) => {
   const fileName = path.basename(filePath)
   const cacheCopy = cache.get()
 
-  const currentTheme = cacheCopy.themes.find(theme => theme.id === cacheCopy.latest)
+  const currentTheme = cacheCopy.find(theme => theme.latest === true)
   const assetIdOfChangedFile = currentTheme.assets.find(asset => asset.name === fileName).id
   const source = fs.readFileSync(filePath, { encoding: 'utf8', flag: 'r' });
 

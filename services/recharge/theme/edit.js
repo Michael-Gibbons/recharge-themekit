@@ -2,7 +2,7 @@ import client from '../../client.js'
 import cache from '../../cache/index.js'
 
 const edit = async (themeId, assetId, data = {}) => {
-  const theme = cache.get().themes.find(theme => theme.id == themeId)
+  const theme = cache.get().find(theme => theme.id == themeId)
   const asset = theme.assets.find(asset => asset.id == assetId)
 
   const postData = {

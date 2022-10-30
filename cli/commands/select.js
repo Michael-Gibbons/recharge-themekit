@@ -3,8 +3,7 @@ const program = new Command();
 
 import inquirer from 'inquirer'
 import list from '../../services/recharge/theme/list.js'
-import cache from '../../services/cache/index.js'
-import init from '../../services/recharge/theme/init.js'
+import setLatestTheme from '../../services/cache/setLatestTheme.js';
 
 const select = program.command('select')
   .description('Get a list of all recharge themes and select the one you would like to work on.')
@@ -31,9 +30,8 @@ const select = program.command('select')
       ])
       .then((answers) => {
         const selectedTheme = answers.select
-        cache.update({ currentTheme: selectedTheme })
-        init(selectedTheme.id)
+        setLatestTheme(selectedTheme.id)
       })
   });
 
-export default  select
+export default select
