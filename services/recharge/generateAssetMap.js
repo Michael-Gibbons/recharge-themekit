@@ -1,4 +1,4 @@
-import client from '../../client.js'
+import client from '../client.js'
 import jsdom from "jsdom";
 const { JSDOM } = jsdom;
 

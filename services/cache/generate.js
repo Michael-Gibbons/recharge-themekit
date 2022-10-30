@@ -1,5 +1,5 @@
 import list from "../recharge/theme/list.js"
-import generateAssetMap from '../../services/recharge/theme/generateAssetMap.js'
+import generateAssetMap from '../recharge/generateAssetMap.js'
 import build from "./build.js"
 
 const generate = async () => {
