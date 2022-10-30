@@ -6,6 +6,7 @@ const program = new Command();
 import watch from './commands/watch.js'
 import select from './commands/select.js'
 import open from './commands/open.js'
+import newTheme from './commands/new.js'
 
 program
   .name('rc-theme')
@@ -16,6 +17,7 @@ program
 program.addCommand(watch)
 program.addCommand(select)
 program.addCommand(open)
+program.addCommand(newTheme)
 
 program.configureHelp()
 
