@@ -8,7 +8,7 @@ Paste it into env
 
 paste url into env, should be of the form https://dyode-boilerplate-sp.admin.rechargeapps.com
 
-paste theme files into a folder labeled `theme` in the root directory
+paste theme files into a folder labeled `theme` in the root directory (this will be extracted into a package later, but for now it needs to be in the root directory)
 
 `node cli/index.js new` to generate the build files and create a new theme for dev, *NEED to do*
 
